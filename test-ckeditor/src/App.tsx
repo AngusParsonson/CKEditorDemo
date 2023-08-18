@@ -10,6 +10,8 @@ const editorConfiguration = {
 };
 
 class App extends Component {
+  editor = null;
+
   render() {
     return (
       <div className="App">
@@ -21,6 +23,14 @@ class App extends Component {
           onReady={(editor) => {
             // You can store the "editor" and use when it is needed.
             console.log("Editor is ready to use!", editor);
+            editor.ui
+              .getEditableElement()
+              .parentElement.insertBefore(
+                editor.ui.view.toolbar.element,
+                editor.ui.getEditableElement()
+              );
+
+            this.editor = editor;
           }}
           onChange={(event, editor) => {
             const data = editor.getData();
