@@ -25,6 +25,7 @@ const App = () => {
                 ".document-editor__toolbar"
               );
               if (editorRef.current) {
+                toolbarContainer.innerHTML = '';
                 toolbarContainer?.appendChild(
                   editor.ui.view.toolbar.element as Node
                 );

@@ -43,14 +43,14 @@ main .ck-editor[role='application'] .ck.ck-content,
 	position: relative;
 	z-index: var(--ck-sample-editor-z-index);
 }
-
 .editor-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
     flex-wrap: nowrap;
     position: relative;
 	width: 100%;
 	justify-content: center;
+	align-items: stretch;
 }
 
 /* --------- DECOUPLED (DOCUMENT) BUILD. ---------------------------------------------*/
@@ -191,25 +191,26 @@ body[data-editor='DecoupledEditor'] .sidebar {
 body[data-editor='InlineEditor'] .collaboration-demo__row {
 	border: 0;
 }
-
 .collaboration-demo__container {
 	max-width: var(--ck-sample-container-width);
 	margin: 0 auto;
 	padding: 1.25rem;
+	flex-direction: column;
+	align-items: stretch;
 }
 
 .presence, .collaboration-demo__row {
 	transition: .2s opacity;
 }
-
 .collaboration-demo__topbar {
 	background: #fff;
 	border: 1px solid var(--ck-color-toolbar-border);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     border-bottom: 0;
     border-radius: 4px 4px 0 0;
+	flex-wrap: wrap;
 }
 
 .collaboration-demo__topbar .btn {

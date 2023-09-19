@@ -33,6 +33,7 @@ createDialog().then( config => {
 
 			// Set a custom container for the toolbar.
 			document.querySelector( '.document-editor__toolbar' ).appendChild( editor.ui.view.toolbar.element );
+			editor.ui.view.toolbar.element.style.flexWrap = 'wrap';
 			document.querySelector( '.ck-toolbar' ).classList.add( 'ck-reset_all' );
 		} )
 		.catch( handleSampleError );

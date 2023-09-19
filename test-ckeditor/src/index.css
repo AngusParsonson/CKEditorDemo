@@ -89,12 +89,21 @@ button:focus-visible {
 
   /* Use the CKEditor CSS variables to keep the UI consistent. */
   border-bottom: 1px solid var(--ck-color-toolbar-border);
+
+  /* Increase the height of the toolbar container to accommodate two rows. */
+  height: 100px;
 }
 
 /* Adjust the look of the toolbar inside the container. */
 .document-editor__toolbar .ck-toolbar {
   border: 0;
   border-radius: 0;
+
+  /* Set the 'flex-wrap' property to 'wrap'. This will allow the toolbar items to wrap onto the next line when there's not enough space on the current line. */
+  flex-wrap: wrap;
+
+  /* Adjust the 'width' property of the toolbar to ensure it spans the full width of the toolbar container. */
+  width: 100%;
 }
 
 /* Make the editable container look like the inside of a native word processor application. */
