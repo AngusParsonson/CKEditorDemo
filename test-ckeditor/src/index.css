@@ -89,6 +89,8 @@ button:focus-visible {
 
   /* Use the CKEditor CSS variables to keep the UI consistent. */
   border-bottom: 1px solid var(--ck-color-toolbar-border);
+
+  background-color: blue;
 }
 
 /* Adjust the look of the toolbar inside the container. */
